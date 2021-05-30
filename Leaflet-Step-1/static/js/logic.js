@@ -24,7 +24,7 @@ legend.onAdd = function(map) {
 
     div.innerHTML += '<i style="background: #b7f34d"></i><span>0-1</span><br>';
     div.innerHTML += '<i style="background: #e1f34d"></i><span>1-2</span><br>';
-    div.innerHTML += '<i style="background: #f3ba4d"></i><span>2-3</span><br>';
+    div.innerHTML += '<i style="background: #f3db4d"></i><span>2-3</span><br>';
     div.innerHTML += '<i style="background: #f3ba4d"></i><span>3-4</span><br>';
     div.innerHTML += '<i style="background: #f0a76b"></i><span>4-5</span><br>';
     div.innerHTML += '<i style="background: #f06b6b"></i><span>5+</span><br>';
@@ -80,7 +80,9 @@ function createFeatures(earthquakeData) {
             case mag > 3:
                 return "#f3ba4d";
             case mag > 2:
-                return "#f3db4d"; 
+                return "#f3db4d";
+            case mag > 1:
+                return "#e1f34d";  
             default:
                 return "#b7f34d";
         }
