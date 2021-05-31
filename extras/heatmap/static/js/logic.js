@@ -1,7 +1,7 @@
 // Create map variable
 var myMap = L.map("map", {
     center: [41.2524, -95.9980],
-    zoom: 4
+    zoom: 3
 });
 
 // Create map layer
@@ -49,7 +49,7 @@ function createFeatures(earthquakeData) {
     L.geoJson(earthquakeData, {
 
         onEachFeature: function (feature, layer) {
-            heatArray.push([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
+            heatArray.push([feature.geometry.coordinates[1], feature.geometry.coordinates[0], feature.properties.mag*5]);
         }
 
     });
